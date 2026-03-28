@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.875rem;
+
+    /* Palette: Deep Red + Yellow + Charcoal */
+    /* Primary red #8B0F14 → oklch(0.31 0.145 22) */
+    /* Yellow #F4C400 → oklch(0.82 0.175 85) */
+    /* Charcoal #2B2F33 → oklch(0.24 0.006 255) */
+
+    --background: 0.98 0 0;
+    --foreground: 0.18 0.01 30;
+
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.01 30;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.01 30;
+
+    /* Primary = deep red */
+    --primary: 0.31 0.145 22;
+    --primary-foreground: 1 0 0;
+
+    /* Secondary = yellow */
+    --secondary: 0.82 0.175 85;
+    --secondary-foreground: 0.18 0.01 30;
+
+    --muted: 0.95 0.005 30;
+    --muted-foreground: 0.52 0.01 30;
+
+    /* Accent = yellow */
+    --accent: 0.82 0.175 85;
+    --accent-foreground: 0.18 0.01 30;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.91 0.005 30;
+    --input: 0.91 0.005 30;
+    --ring: 0.31 0.145 22;
+
+    /* Megamall brand tokens */
+    --brand-red: 0.31 0.145 22;
+    --brand-red-dark: 0.26 0.13 22;
+    --brand-yellow: 0.82 0.175 85;
+    --brand-yellow-dark: 0.74 0.16 85;
+    --brand-charcoal: 0.24 0.006 255;
+    --brand-charcoal-light: 0.29 0.006 255;
+    --brand-green: 0.72 0.19 150;
+    --brand-star: 0.78 0.165 82;
+    --brand-pink: 0.55 0.22 340;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.31 0.145 22;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.97 0 0;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.922 0 0;
+    --sidebar-ring: 0.708 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-brand-red {
+    background-color: oklch(var(--brand-red));
+  }
+  .bg-brand-red-dark {
+    background-color: oklch(var(--brand-red-dark));
+  }
+  .bg-brand-yellow {
+    background-color: oklch(var(--brand-yellow));
+  }
+  .bg-brand-yellow-dark {
+    background-color: oklch(var(--brand-yellow-dark));
+  }
+  .bg-brand-charcoal {
+    background-color: oklch(var(--brand-charcoal));
+  }
+  .bg-brand-charcoal-light {
+    background-color: oklch(var(--brand-charcoal-light));
+  }
+  .bg-brand-green {
+    background-color: oklch(var(--brand-green));
+  }
+  .text-brand-red {
+    color: oklch(var(--brand-red));
+  }
+  .text-brand-yellow {
+    color: oklch(var(--brand-yellow));
+  }
+  .text-brand-charcoal {
+    color: oklch(var(--brand-charcoal));
+  }
+  .text-brand-star {
+    color: oklch(var(--brand-star));
+  }
+  .border-brand-yellow {
+    border-color: oklch(var(--brand-yellow));
+  }
+  .border-brand-red {
+    border-color: oklch(var(--brand-red));
+  }
+  .ring-brand-yellow {
+    --tw-ring-color: oklch(var(--brand-yellow));
+  }
+  .hover\:bg-brand-red-dark:hover {
+    background-color: oklch(var(--brand-red-dark));
+  }
+  .hover\:bg-brand-yellow-dark:hover {
+    background-color: oklch(var(--brand-yellow-dark));
+  }
+  .text-brand-pink {
+    color: oklch(var(--brand-pink));
+  }
+  .bg-brand-pink {
+    background-color: oklch(var(--brand-pink));
+  }
+}
